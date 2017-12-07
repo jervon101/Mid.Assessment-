@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.loopactivity.BlankFragment"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:id="@+id/bigfrag">
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_gravity="center">
+
+       <TextView
+           android:id="@+id/fragtext"
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:text="@string/hello_blank_fragment"
+           android:textAlignment="center"
+           android:gravity="center"
+           android:textSize="30dp"/>
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recycle"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </android.support.v7.widget.RecyclerView>
+
+   </LinearLayout>
+
+
+</FrameLayout>

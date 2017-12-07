@@ -41,12 +41,13 @@ public class LoginActivity extends AppCompatActivity {
                 if (box.isChecked()) {
                     editor.putString(edit1.getText().toString(), edit2.getText().toString());
                     editor.commit();
-                    if (edit1.getText().toString().equals("user@aol.com") && edit2.getText().toString().equals("password1234")) {
-                        Intent intent = new Intent(getApplicationContext(),ListActivity.class);
-                        intent.putExtra("email",edit1.getText().toString());
-                        startActivity(intent);
-                    }
                 }
+                if (edit1.getText().toString().equals("user@aol.com") && edit2.getText().toString().equals("password1234")) {
+                    Intent intent = new Intent(getApplicationContext(), ListActivity.class);
+                    intent.putExtra("email", edit1.getText().toString());
+                    startActivity(intent);
+                }
+
             }
         });
 
