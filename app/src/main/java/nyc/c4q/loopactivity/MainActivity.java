@@ -1,34 +1,52 @@
 package nyc.c4q.loopactivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView view;
+    Button button;
     int num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        num = 0;
 
         DoStuff test = new DoStuff();
         test.execute(num);
+
+        view = (TextView) findViewById(R.id.text);
+
+        button = (Button) findViewById(R.id.buttonmain);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
 
     class DoStuff extends AsyncTask<Integer, Integer, Integer> {
 
-        TextView view;
+
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            view = (TextView) view.findViewById(R.id.text);
+
         }
 
         @Override
